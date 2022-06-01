@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
-import {Button} from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
+
 
 function SignUp (){
     const [email, setEmail] = useState('')
@@ -21,7 +22,7 @@ function SignUp (){
         setName(event.target.value)
     }
     
-    const onClcikLogin = () =>{
+    const onClickRegister = () =>{
 
 
        fetch('http://34.64.161.129:5000/sign-up', {
@@ -56,25 +57,48 @@ function SignUp (){
     ,[])
 
     return(
+      
         <div>
             <h2>회원가입</h2>
             <div>
                 <label htmlFor="email">이메일 주소:</label>
-                <input type="text" name="email" value={email} onChange={handleEmail}></input>
+                <input type="email" name="email" value={email} onChange={handleEmail}></input>
             </div>
             <div>
                 <label htmlFor="pwd">비밀번호:</label>
-                <input type="text" name="pwd" value={pwd} onChange={handlePwd}></input>
+                <input type="password" name="pwd" value={pwd} onChange={handlePwd}></input>
             </div>
             <div>
                 <label htmlFor="name">이름</label>
                 <input type="text" name="inputName" value={name} onChange={handleName}></input>
             </div>
             <div>
-                <button type='button' onClick={onClcikLogin}>로그인</button>
+                <button type='button' onClick={onClickRegister}>가입하기</button>
          
             </div>
         </div>
+       /*
+        <Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email"  defaultValue={email} onChange={handleEmail}/>
+         
+        </Form.Group>
+      
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" defaultValue={pwd} onChange={handlePwd}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Name</Form.Label>
+            <Form.Control placeholder="Name" defaultChecked={name} onChange={handleName} />
+        </Form.Group>
+        <Button variant="primary" type="button" onClick={onClickRegister}>
+          Sign-up
+        </Button>
+      </Form>
+         */
     )
 }
 
