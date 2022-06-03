@@ -1,0 +1,92 @@
+{% include 'layout/head.html' %}
+<body>
+  {% include 'layout/header.html' %}
+      <p></p>
+      <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-secondary">전체</button>
+          <button type="button" class="btn btn-secondary">공지사항</button>
+          <button type="button" class="btn btn-secondary">커뮤니티</button>
+          <button type="button" class="btn btn-secondary">플레이리스트</button>
+        </div>
+      </div>
+
+      <div class="container text-center">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성자</th>
+            <th scope="col">분류</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in contents %}
+          <tr class="table-secondary">
+            <th scope="row">{{ row.no }} </th>
+            <td>{{ row.title }} </td>
+            <td>{{ row.author }} </td>
+            <td>{{ row.category }} </td>
+          </tr>       
+          {% endfor %}
+          <tr class="table-secondary">
+            <th scope="row">1</th>
+            <td>플리 추천</td>
+            <td>김재학</td>
+            <td>공지사항</td>
+          </tr>          
+          <tr class="table-secondary">
+            <th scope="row">2</th>
+            <td>Pliz 화이팅</td>
+            <td>김찬우</td>
+            <td>정보</td>
+          </tr> 
+          <tr class="table-secondary">
+            <th scope="row">3</th>
+            <td>ㅎㅇㅎㅇ</td>
+            <td>오세영</td>
+            <td>음악추천</td>
+          </tr>          
+          <tr class="table-secondary">
+            <th scope="row">4</th>
+            <td>ㅎㅇㅎㅇ</td>
+            <td>전상현</td>
+            <td>똥글</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <button type="button" class="btn btn-outline-danger" style="float:right;">글쓰기</button>
+      <!-- 버튼라인 ~ 페이징 라인 공백 넣기 -->
+
+      <div>
+        <ul class="pagination justify-content-center" >
+          <li class="page-item disabled">
+            <a class="page-link" href="#">&laquo;</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">5</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
