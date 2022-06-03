@@ -33,3 +33,7 @@ def create_app(test_config=None):
     create_endpoints(app, services, app.config)
 
     return app
+
+if __name__ == "__main__":
+    app = create_app()
+    app.run(debug=True)
