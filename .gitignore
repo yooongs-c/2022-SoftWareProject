@@ -1,0 +1,23 @@
+.github_credentials
+
+# backend: environment
+backend/env/
+backend/venv/
+backend/ENV/
+bakcend/env.bak/
+backend venv.bak/
+
+# backend: Spyder project settings
+backend/.spyderproject
+bakcend/.spyproject
+
+# bacakend: mkdocs documentation
+backend/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
