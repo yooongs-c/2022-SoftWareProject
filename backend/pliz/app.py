@@ -2,9 +2,9 @@ from flask import Flask
 from sqlalchemy import create_engine
 from flask_cors import CORS
 
-from model import UserDao, CommunityDao, PlaylistDao
-from service import UserService, CommunityService, PlaylistService
-from view import create_endpoints
+from models import UserDao, CommunityDao, PlaylistDao
+from services import UserService, CommunityService, PlaylistService
+from views import create_endpoints
 
 class Services:
     pass
