@@ -1,5 +1,6 @@
 .github_credentials
 .env*
+*config.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
