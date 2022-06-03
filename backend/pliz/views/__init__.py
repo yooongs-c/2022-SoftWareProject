@@ -4,6 +4,8 @@ import requests
 from flask import request, jsonify, current_app, Response, g
 from flask.json import JSONEncoder
 from functools import wraps
+from . import index_blueprint
+from .community import blueprint as community_blueprint
 
 
 class CustomJsonEncoder(JSONEncoder):

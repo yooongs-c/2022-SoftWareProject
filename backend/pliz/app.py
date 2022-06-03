@@ -4,13 +4,17 @@ from flask_cors import CORS
 
 from models import UserDao, CommunityDao, PlaylistDao
 from services import UserService, CommunityService, PlaylistService
-from views import create_endpoints
+from views import create_endpoints, index_blueprint, community_blueprint
 
 class Services:
     pass
 
 def create_app(test_config=None):
-    app = Flask(__name__)
+    app = Flask(
+        __name__,
+        static_url_path='/pliz/static',
+        static_folder='static',
+        template_folder='templates')
 
     CORS(app)
 
@@ -31,6 +35,9 @@ def create_app(test_config=None):
     services.playlist_service = PlaylistService(playlist_dao)
 
     create_endpoints(app, services, app.config)
+
+    app.register_blueprint(index_blueprint.bp)
+    app.register_blueprint(community_blueprint.bp)
 
     return app
 
