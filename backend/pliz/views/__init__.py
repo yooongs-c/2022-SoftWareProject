@@ -6,7 +6,7 @@ from flask.json import JSONEncoder
 from functools import wraps
 from . import index_blueprint
 from .community import blueprint as community_blueprint
-
+from .rank import blueprint as rank_blueprint
 
 class CustomJsonEncoder(JSONEncoder):
     def default(self, obj):

@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 from models import UserDao, CommunityDao, PlaylistDao
 from services import UserService, CommunityService, PlaylistService
-from views import create_endpoints, index_blueprint, community_blueprint
+from views import create_endpoints, index_blueprint, community_blueprint, rank_blueprint
 
 class Services:
     pass
@@ -38,6 +38,7 @@ def create_app(test_config=None):
 
     app.register_blueprint(index_blueprint.bp)
     app.register_blueprint(community_blueprint.bp)
+    app.register_blueprint(rank_blueprint.bp)
 
     return app
 
