@@ -4,7 +4,7 @@ import { ListGroup } from "react-bootstrap";
 import { useBootstrapBreakpoints } from "react-bootstrap/esm/ThemeProvider";
 import { Link, useParams } from "react-router-dom";
 import albumcover from '../1.jpeg';
-import Page from "./Page";
+
 
 function Mypage() {
 
@@ -79,7 +79,7 @@ function Mypage() {
             <h1 className="card-title">{info.name}</h1>
             <p className="card-text">{intro}</p>
             <p className="card-text">contact me: <a href="/playlist-community" style={{ color: 'black' }}>{info.email}</a></p>
-            <button type="button" class="btn btn-outline-light btn-sm" style={{margin}}>수정하기</button>
+            <button type="button" class="btn btn-outline-light btn-sm">수정하기</button>
           </div>
         </div>
 
