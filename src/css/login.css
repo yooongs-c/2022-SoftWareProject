@@ -1,0 +1,33 @@
+#login-div{
+    width: 300px;
+ margin: 100px auto;
+}
+#loginForm{
+  
+display: inline-block;
+
+
+}
+
+
+#loginBtn{
+    margin-top: 20px;
+    margin-left: 208px;
+
+}
+#login-label{    
+    font-size: 40px;
+}
+#textForm{
+    margin-top: 10px;
+    margin-left: 90px;
+}
+#registerBtn{
+    margin-left: 194px;
+}
+#regBtn{
+    margin-top: 20px;
+
+    margin-left: 190px;
+
+}
